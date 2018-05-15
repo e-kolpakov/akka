@@ -5,11 +5,16 @@
 package docs.akka.stream.typed
 
 import akka.NotUsed
-import akka.stream.ActorMaterializer
+import akka.actor.typed.ActorSystem
+import akka.stream.typed.ActorMaterializer
 
 object ActorSourceSinkExample {
 
-  implicit val mat: ActorMaterializer = ???
+  val system: ActorSystem[_] = ???
+
+  implicit val mat: ActorMaterializer = ActorMaterializer()(system)
+
+  akka.stream.typed.ActorMaterializer
 
   {
     // #actor-source-ref
