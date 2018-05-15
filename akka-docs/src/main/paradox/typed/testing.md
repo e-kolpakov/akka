@@ -116,7 +116,7 @@ Java
 
 ### Testing other effects
 
-The `BehaviorTestkit` keeps track other effects you can verify, look at the sub-classes of `akka.testkit.typed.Effect`
+The `BehaviorTestkit` keeps track other effects you can verify, look at the sub-classes of `akka.actor.testkit.typed.Effect`
 
  * SpawnedAdapter
  * Stopped
@@ -189,7 +189,7 @@ Java
 
 @@@ div { .group-java }
 
-If you are using JUnit you can use `akka.testkit.typed.javadsl.TestKitJunitResource` to have the async test kit automatically
+If you are using JUnit you can use `akka.actor.testkit.typed.javadsl.TestKitJunitResource` to have the async test kit automatically
 shutdown when the test is complete.
 
 Note that the dependency on JUnit is marked as optional from the test kit module, so your project must explicitly include
